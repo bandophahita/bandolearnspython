@@ -1,34 +1,33 @@
-__author__ = 'marcel.wilson'
+#!/usr/bin/env python
 import cPickle
-dict = {1: 'abc', 2: 'xyz'}
+
+__author__ = 'marcel.wilson'
+
+d = {1: 'abc', 2: 'xyz'}
 dict2 = {5: 'aasdgadhgahbc', 6: 'xsghnmsyz'}
-dict3 = {'b':'232342', 'c':'29385039461'}
+dict3 = {'b': '232342', 'c': '29385039461'}
 
 print "open - write"
-file = open('tempfile.txt', 'wb')
+fp = open('tempfile.txt', 'wb')
 
-cPickle.dump(dict, file, -1)
-cPickle.dump(dict2, file, -1)
-cPickle.dump(dict3, file, -1)
+cPickle.dump(d, fp, -1)
+cPickle.dump(dict2, fp, -1)
+cPickle.dump(dict3, fp, -1)
 #file.write(dict.__class__.__name__ + " = "+ str(dict))
 
-file.close()
+fp.close()
 print "closed write"
 
-
-
 print "open - read"
-file = open('tempfile.txt', 'rb')
-first = cPickle.load(file)
+fp = open('tempfile.txt', 'rb')
+first = cPickle.load(fp)
 print first
-second = cPickle.load(file)
+second = cPickle.load(fp)
 print second
-third = cPickle.load(file)
+third = cPickle.load(fp)
 print third
 
-file.close()
+fp.close()
 print "closed read"
-
-
 
 print "end of script"

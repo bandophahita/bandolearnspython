@@ -3,4 +3,4 @@
 # Measure some strings:
 a = ['dog', 'house', 'minnesota']
 for x in a:
-	print x, len(x)
+    print x, len(x)

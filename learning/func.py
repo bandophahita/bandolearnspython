@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 def fib(n):
     result = []
     a,b=0,1
